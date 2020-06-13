@@ -1,0 +1,17 @@
+<snippet>
+	<content><![CDATA[
+long long toint(string s) { // 作用 : 二进制串转十进制数 (long long)
+	long long x = 0;
+	int m = s.size();
+	for (int j = 0; j < m; ++j)
+	{
+	    x = x*2 + s[j] - '0'; // 二进制s --> 十进制x
+	}
+	return x;
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>toint</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.c++</scope>
+</snippet>

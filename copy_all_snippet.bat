@@ -1,0 +1,1 @@
+Xcopy "C:\Users\47461\AppData\Roaming\Sublime Text 3"\Packages\User\*.sublime-snippet E:\Documents\sublimeSnippet /s /y /d

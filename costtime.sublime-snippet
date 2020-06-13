@@ -1,0 +1,9 @@
+<snippet>
+	<content><![CDATA[
+cout << " ********************\n Time cost : " << fixed << setprecision(5) << (double)clock()/CLOCKS_PER_SEC << 's' << endl; // 注意使用文件输出, 否则定义两个clock()相减
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>costtime</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.c++</scope>
+</snippet>

@@ -1,0 +1,18 @@
+<snippet>
+	<content><![CDATA[
+int gcd(int a, int b) {	// 最大公约数的辗转相除法
+	int t; 
+	while(b > 0) {
+		t = a % b;
+		a = b;
+		b = t;
+	}
+	return a;
+}
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>gcd</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.c++</scope>
+</snippet>
