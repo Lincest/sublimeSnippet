@@ -12,3 +12,5 @@
 |init|生成一套c++模板|
 |shortcut-help|常用快捷键help|
 |snippet-help|代码段help|
+
+其余见./snippet-help.sublime-snippet
