@@ -7,7 +7,8 @@
 
 初始化类 : 
 init 	 -- 	快速生成简单c++模板
-cf   	 -- 	快速生成一份codeforce c++模板
+cf   	 -- 	生成codeforce cpp模板 
+leetcode --     生成leetcode模板 (带文件输入输出)
 
 ***************************************************
 
@@ -27,7 +28,7 @@ for2	 -- 	双层for循环
 
 debug类 : 
 costtime --		计算运行时间
-
+debug    --     输出值和对应行数
 */}
 
 ]]></content>
