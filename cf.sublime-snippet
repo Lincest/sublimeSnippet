@@ -1,5 +1,9 @@
 <snippet>
 	<content><![CDATA[
+/**
+*   author:     roccoshi
+*   created:    ${1:alt+t}
+*/
 #include<bits/stdc++.h>
 using namespace std;
 #define ll long long

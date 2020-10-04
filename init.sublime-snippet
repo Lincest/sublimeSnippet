@@ -1,10 +1,14 @@
 <snippet>
 	<content><![CDATA[
+/**
+*   author:     roccoshi
+*   created:    ${1:alt+t}
+*/
 #include<bits/stdc++.h>
 using namespace std;
 
 int main() {
-	
+	${2:/*code*/}
     return 0;
 }
 ]]></content>

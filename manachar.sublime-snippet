@@ -1,0 +1,41 @@
+<snippet>
+	<content><![CDATA[
+// manachar求最大回文子长度
+const int maxn = 2000000 + 5;
+int lens[maxn];
+
+string expand(string s) { // 扩展字符串
+	string ss = "@";
+	for (int i = 0; i < s.size(); ++i) {
+		ss += '#';
+		ss += s[i];
+	}
+	ss += "#^";
+	return ss;
+}
+int manachar(string s) { // 返回最大回文子串长度
+	s = expand(s);
+	int mx = 0;
+	int pos = 0;
+	int ans = -1;
+	for (int ptr = 1; ptr < s.size() - 1; ++ptr) {
+		if (ptr < mx) 
+			lens[ptr] = min (lens[2 * pos - ptr], mx - ptr);
+		else
+			lens[ptr] = 1;
+		while (s[ptr - lens[ptr]] == s[ptr + lens[ptr]])
+			lens[ptr]++;
+		if (mx < ptr + lens[ptr]) { 
+			mx = ptr + lens[ptr];
+			pos = ptr;
+		}
+  		ans = max (ans, lens[ptr] - 1);
+	}
+	return ans;
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>manachar</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.c++</scope>
+</snippet>
