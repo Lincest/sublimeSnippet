@@ -14,3 +14,7 @@
 |snippet-help|代码段help|
 
 其余见./snippet-help.sublime-snippet
+
+完整的sublime备份见[release](https://github.com/Lincest/sublimeSnippet/releases/tag/1.0), 为windows下Program Files/Sublime Text 3的压缩文件
+
+
