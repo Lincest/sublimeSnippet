@@ -1,0 +1,394 @@
+{
+	"folder_history":
+	[
+	],
+	"last_version": 3211,
+	"last_window_id": 4,
+	"log_indexing": false,
+	"settings":
+	{
+		"new_window_height": 480.8,
+		"new_window_settings":
+		{
+			"auto_complete":
+			{
+				"selected_items":
+				[
+				]
+			},
+			"build_system_choices":
+			[
+			],
+			"build_varint": "",
+			"command_palette":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+					[
+						"less",
+						"Set Syntax: Less"
+					],
+					[
+						"install",
+						"Package Control: Install Package"
+					],
+					[
+						"pack",
+						"View Package File"
+					]
+				],
+				"width": 0.0
+			},
+			"console":
+			{
+				"height": 0.0,
+				"history":
+				[
+				]
+			},
+			"distraction_free":
+			{
+				"menu_visible": true,
+				"show_minimap": false,
+				"show_open_files": false,
+				"show_tabs": false,
+				"side_bar_visible": false,
+				"status_bar_visible": false
+			},
+			"file_history":
+			[
+				"/E/Documents/2020大三上课程/computer_graph/Code/GLUT库/配置.txt",
+				"/C/Users/47461/AppData/Roaming/Sublime Text 3/Packages/User/init.sublime-snippet",
+				"/C/Users/47461/Desktop/test.cpp",
+				"/C/Program Files/Sublime Text 3/Data/Packages/Default/install_package_control.py",
+				"/C/Program Files/Sublime Text 3/Data/Packages/User/Package Control.sublime-settings",
+				"/E/Documents/sublimeSnippet/copy_all_snippet.bat",
+				"/C/Users/47461/AppData/Roaming/Sublime Text 3/try.c"
+			],
+			"find":
+			{
+				"height": 40.0
+			},
+			"find_in_files":
+			{
+				"height": 0.0,
+				"where_history":
+				[
+				]
+			},
+			"find_state":
+			{
+				"case_sensitive": false,
+				"find_history":
+				[
+				],
+				"highlight": true,
+				"in_selection": false,
+				"preserve_case": false,
+				"regex": false,
+				"replace_history":
+				[
+				],
+				"reverse": false,
+				"show_context": true,
+				"use_buffer2": true,
+				"whole_word": false,
+				"wrap": true
+			},
+			"incremental_find":
+			{
+				"height": 27.0
+			},
+			"input":
+			{
+				"height": 0.0
+			},
+			"menu_visible": true,
+			"output.find_results":
+			{
+				"height": 0.0
+			},
+			"pinned_build_system": "",
+			"replace":
+			{
+				"height": 50.0
+			},
+			"save_all_on_build": true,
+			"select_file":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"select_project":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"select_symbol":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"show_minimap": true,
+			"show_open_files": false,
+			"show_tabs": true,
+			"side_bar_visible": true,
+			"side_bar_width": 150.0,
+			"status_bar_visible": true,
+			"template_settings":
+			{
+			}
+		},
+		"new_window_width": 640.0
+	},
+	"windows":
+	[
+		{
+			"auto_complete":
+			{
+				"selected_items":
+				[
+				]
+			},
+			"buffers":
+			[
+				{
+					"file": "/E/projects/Front-End/EChart-Standard/eckarts_open_class/echart/css/index.less",
+					"settings":
+					{
+						"buffer_size": 5112,
+						"encoding": "UTF-8",
+						"line_ending": "Windows"
+					}
+				}
+			],
+			"build_system": "",
+			"build_system_choices":
+			[
+			],
+			"build_varint": "",
+			"command_palette":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+					[
+						"less",
+						"Set Syntax: Less"
+					],
+					[
+						"install",
+						"Package Control: Install Package"
+					],
+					[
+						"pack",
+						"View Package File"
+					]
+				],
+				"width": 0.0
+			},
+			"console":
+			{
+				"height": 0.0,
+				"history":
+				[
+				]
+			},
+			"distraction_free":
+			{
+				"menu_visible": true,
+				"show_minimap": false,
+				"show_open_files": false,
+				"show_tabs": false,
+				"side_bar_visible": false,
+				"status_bar_visible": false
+			},
+			"file_history":
+			[
+				"/E/Documents/Text/markUse/解决sublimeText3PackageControl无法显示的问题.txt",
+				"/E/Documents/2020大三上课程/computer_graph/Code/GLUT库/配置.txt",
+				"/C/Users/47461/AppData/Roaming/Sublime Text 3/Packages/User/init.sublime-snippet",
+				"/C/Users/47461/Desktop/test.cpp",
+				"/C/Program Files/Sublime Text 3/Data/Packages/Default/install_package_control.py",
+				"/C/Program Files/Sublime Text 3/Data/Packages/User/Package Control.sublime-settings",
+				"/E/Documents/sublimeSnippet/copy_all_snippet.bat",
+				"/C/Users/47461/AppData/Roaming/Sublime Text 3/try.c"
+			],
+			"find":
+			{
+				"height": 40.0
+			},
+			"find_in_files":
+			{
+				"height": 0.0,
+				"where_history":
+				[
+				]
+			},
+			"find_state":
+			{
+				"case_sensitive": false,
+				"find_history":
+				[
+				],
+				"highlight": true,
+				"in_selection": false,
+				"preserve_case": false,
+				"regex": false,
+				"replace_history":
+				[
+				],
+				"reverse": false,
+				"show_context": true,
+				"use_buffer2": true,
+				"whole_word": false,
+				"wrap": true
+			},
+			"groups":
+			[
+				{
+					"selected": 0,
+					"sheets":
+					[
+						{
+							"buffer": 0,
+							"file": "/E/projects/Front-End/EChart-Standard/eckarts_open_class/echart/css/index.less",
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 5112,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										1712,
+										1688
+									]
+								],
+								"settings":
+								{
+									"is_init_dirty_state": false,
+									"origin_encoding": "UTF-8",
+									"syntax": "Packages/LESS/Syntaxes/LESS.sublime-syntax"
+								},
+								"translation.x": 0.0,
+								"translation.y": 0.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 0,
+							"type": "text"
+						}
+					]
+				}
+			],
+			"incremental_find":
+			{
+				"height": 27.0
+			},
+			"input":
+			{
+				"height": 0.0
+			},
+			"layout":
+			{
+				"cells":
+				[
+					[
+						0,
+						0,
+						1,
+						1
+					]
+				],
+				"cols":
+				[
+					0.0,
+					1.0
+				],
+				"rows":
+				[
+					0.0,
+					1.0
+				]
+			},
+			"menu_visible": true,
+			"output.find_results":
+			{
+				"height": 0.0
+			},
+			"pinned_build_system": "",
+			"position": "0,2,3,-1,-1,-1,-1,666,128,128,782",
+			"project": "",
+			"replace":
+			{
+				"height": 50.0
+			},
+			"save_all_on_build": true,
+			"select_file":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"select_project":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"select_symbol":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"selected_group": 0,
+			"settings":
+			{
+			},
+			"show_minimap": true,
+			"show_open_files": false,
+			"show_tabs": true,
+			"side_bar_visible": true,
+			"side_bar_width": 150.0,
+			"status_bar_visible": true,
+			"template_settings":
+			{
+			},
+			"window_id": 1,
+			"workspace_name": ""
+		}
+	],
+	"workspaces":
+	{
+		"recent_workspaces":
+		[
+		]
+	}
+}
