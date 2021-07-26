@@ -305,8 +305,8 @@ public:
     }
 };
 
+/* 使用方法: 
 int main() {
-    /*code*/
     BigInt a, b;
     cin >> a >> b;
     cout << a + b << endl;
@@ -315,7 +315,7 @@ int main() {
     cout << a - b << endl;
     return 0;
 }
-
+*/
 ]]></content>
     <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
     <tabTrigger>BIG</tabTrigger>

@@ -39,7 +39,8 @@ for2	 -- 	双层for循环
 
 debug类 : 
 costtime --		计算运行时间
-debug    --     输出值和对应行数
+debug    --     to_string各类变量
+
 */}
 
 ]]></content>
