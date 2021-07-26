@@ -1,0 +1,13 @@
+<snippet>
+	<content><![CDATA[
+for(int i = 0; i < ${1:n}; ++i) {
+	for(int j = 0; j < ${2:m}; ++j) {
+		${3:/*code*/}
+	}
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>for2</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.c++</scope>
+</snippet>

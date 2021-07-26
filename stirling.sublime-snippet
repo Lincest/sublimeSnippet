@@ -1,0 +1,40 @@
+<snippet>
+    <content><![CDATA[
+${1:
+//-----条件-----
+typedef long long ll;
+const int mod = 1e9 + 7;
+const int maxn = 1005;
+//--------------
+}
+int stirling_1[maxn][maxn];
+int stirling_2[maxn][maxn];
+// 求第一类斯特林数:
+// 将n个不同的数分成k个圆排列的方案数
+int stirling_first(int n, int k) {
+    stirling_1[0][0] = 1;
+    for (int i = 1; i <= n; ++i) {
+        for (int j = 1; j <= k; ++j) {
+            stirling_1[i][j] = (stirling_1[i - 1][j - 1] + (ll)stirling_1[i - 1][j] * (i - 1)) % mod;
+         }
+    }
+    return stirling_1[n][k];
+}
+
+// 求第二类斯特林数:
+// 将n个不同的数分成k个子集的方案数
+int stirling_second(int n, int k) {
+    stirling_2[0][0] = 1;
+    for (int i = 1; i <= n; ++i) {
+        for (int j = 1; j <= k; ++j) {
+            stirling_2[i][j] = (stirling_2[i - 1][j - 1] + (ll)stirling_2[i - 1][j] * j) % mod;
+        }
+    }
+    return stirling_2[n][k];
+}
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>stirling</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.c++</scope>
+</snippet>

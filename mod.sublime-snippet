@@ -1,0 +1,44 @@
+<snippet>
+    <content><![CDATA[
+const int mod = 1e9 + 7;
+
+// 加法取模
+ll add_mod(ll a, ll b) {
+    a %= mod; b %= mod; return (a + b) % mod;
+}
+
+// 减法取模
+ll sub_mod(ll a, ll b) { 
+    a %= mod; b %= mod; return (a - b + mod) % mod; 
+}
+
+// 乘法取模
+ll mul_mod(ll a, ll b) { 
+    a %= mod; b %= mod; return a * b % mod; 
+}
+
+// 除法取模
+ll qpow(ll x, ll y, ll mod)  {
+    ll ans = 1;
+    while (y) {
+        if(y & 1) ans = ans * x % mod;
+        x = x * x % mod;
+        y >>= 1;
+    }
+    return ans;
+}
+
+ll div_mod(ll a, ll b) {
+    return a * qpow(b, mod - 2, mod) % mod;
+}
+
+// 等差数列求和取模(首, 末, 长度)
+ll all_sum_mod(ll a1, ll an, ll len) {
+    return (len % 2 == 0 ? mul_mod((a1 + an), (len >> 1)) : mul_mod((a1 + an) >> 1, len));
+}
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>mod</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.c++</scope>
+</snippet>

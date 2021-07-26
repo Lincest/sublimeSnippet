@@ -1,0 +1,39 @@
+<snippet>
+    <content><![CDATA[
+// edge: 邻接表
+// n: 结点个数
+// k: 源点
+// 结点从1开始标号
+// return -> dis[]单源最短路
+vector<int> spfa (vector<vector<pair<int, int>>>& edge, int n, int k) {
+    vector<bool> inq(n + 1, false); // 是否在队列中
+    vector<int> dis(n + 1, INT_MAX >> 1);
+    vector<int> cnt(n + 1, 0); // 入队次数
+    queue<int> q;
+    q.push(k); // 源点入队
+    cnt[k]++;
+    dis[k] = 0;
+    while (!q.empty()) {
+        int u = q.front();
+        q.pop();
+        inq[u] = false;
+        for (auto& [v, d] : edge[u]) {
+            if (dis[u] + d < dis[v]) {
+                dis[v] = dis[u] + d;
+                if (!inq[v]) {
+                    q.push(v);
+                    cnt[v]++;
+                    if (cnt[v] >= n) return {}; // 有可达负环
+                    inq[v] = true;
+                }
+            }
+        }
+    }
+    return dis;
+}
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>spfa</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.c++</scope>
+</snippet>

@@ -1,0 +1,18 @@
+<snippet>
+	<content><![CDATA[
+// quick pow
+ll qpow(ll x, ll y, ll mod)  {
+    ll ans = 1;
+    while (y) {
+        if(y & 1) ans = ans * x % mod;
+        x = x * x % mod;
+        y >>= 1;
+    }
+    return ans;
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>qpow</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.c++</scope>
+</snippet>

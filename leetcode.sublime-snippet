@@ -1,0 +1,21 @@
+<snippet>
+	<content><![CDATA[
+/**
+*   author:     roccoshi
+*   created:    2021-07-18 10:24:42
+*/
+#include<bits/stdc++.h>
+using namespace std;
+
+$1
+
+int main() {
+    Solution s = ${2:/*code*/};
+    return 0;
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>leetcode</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

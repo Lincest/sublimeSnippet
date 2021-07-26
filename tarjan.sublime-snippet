@@ -1,0 +1,60 @@
+<snippet>
+    <content><![CDATA[
+vector<pll> graph[maxn]; // 老图 graph[i] = {{to, weight}}
+vector<pll> newg[maxn]; // 新图
+// scc[i]含有has[i]个点
+ll scc[maxn]; 
+vector<vector<ll>> has(1);
+ll dfn[maxn], low[maxn];
+ll dfn_cnt = 0, scc_cnt = 0; // scc_cnt表示缩的点数
+
+// 缩点
+void tarjan(int from) {
+    dfn[from] = low[from] = ++dfn_cnt;
+    st.push(from);
+    ll to;
+    for (auto& pp: graph[from]) {
+        to = pp.fi;
+        if (dfn[to] == 0) {
+            tarjan(to);
+            low[from] = min(low[from], low[to]);
+        } else if (scc[to] == 0) {
+            low[from] = min(low[from], dfn[to]);
+        }
+    }
+    if (low[from] == dfn[from]) {
+        ++scc_cnt;
+        has.push_back(vector<ll>());
+        while (1) {
+            to = st.top();
+            st.pop();
+            scc[to] = scc_cnt;
+            has[scc_cnt].push_back(to);
+            if (from == to) {
+                break;
+            }
+        }
+    }
+}   
+
+// 缩点(标号从1开始)
+for (int i = 1; i <= n; ++i) {
+    if (dfn[i] == 0) {
+        tarjan(i);
+    }
+}
+
+for (int from = 1; from <= n; ++from) {
+    for (auto pp : graph[from]) {
+        to = pp.fi, weight = pp.se;
+        if (scc[to] != scc[from]) {
+            newg[scc[from]].emplace_back(scc[to], weight);
+        }
+    }
+}
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>tarjan</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.c++</scope>
+</snippet>

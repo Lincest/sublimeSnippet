@@ -1,0 +1,46 @@
+<snippet>
+    <content><![CDATA[
+template<typename T>
+class BIT_opsum {
+public:
+    T operator() (const T& u, const T& v) const {
+        return u + v;
+    }
+};
+
+template<typename T, typename Accumulate = BIT_opsum<T>>
+class BIT {
+private:
+    vector<T> tree;
+    Accumulate op;
+    int n;
+
+public:
+    BIT (int _n, Accumulate _op = Accumulate{}): n(_n), tree(_n + 1), op(_op) {}
+    static int lowbit(int x) {
+        return x & (-x);
+    }
+
+    void update(int x, T value) {
+        while (x <= n) {
+            tree[x] = op(tree[x], value);
+            x += lowbit(x);
+        }
+    }
+
+    T query(int x) const {
+        T ans{};
+        while (x) {
+            ans = op(ans, tree[x]);
+            x -= lowbit(x);
+        }
+        return ans;
+    }
+};
+
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>BIT</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.c++</scope>
+</snippet>

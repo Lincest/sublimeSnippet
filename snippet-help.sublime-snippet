@@ -1,0 +1,50 @@
+<snippet>
+	<content><![CDATA[${2:
+/* 
+
+自定义snippet帮助文档 $1
+***************************************************
+
+初始化类 : 
+init 	 -- 	快速生成简单c++模板
+cf   	 -- 	生成codeforce cpp模板 
+leetcode --     生成leetcode模板 (带文件输入输出)
+reio    --     重定向输入输出
+
+***************************************************
+
+算法类 :
+gcd  	 -- 	求最大公约数, 最小公倍数
+kmp  	 -- 	kmp字符串匹配
+qpow 	 -- 	快速幂
+toint	 -- 	二进制串转十进制
+tobit	 -- 	十进制转二进制串
+manachar --     求最大回文子串
+mod      --     加减乘/求和 取模
+tarjan   --     tarjan缩点
+dijkstra --     dijkstra最短路算法
+BIT      --     树状数组
+stirling --     第一,二类斯特林数
+BIG      --     高精度类
+bigcal   --     高精度加减乘除计算
+trie     --     字典树求字符串出现次数
+strhash  --     字符串哈希
+
+***************************************************
+
+操作简化类 :
+for2	 -- 	双层for循环
+
+***************************************************
+
+debug类 : 
+costtime --		计算运行时间
+debug    --     输出值和对应行数
+*/}
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>snippet-help</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.c++</scope>
+</snippet>

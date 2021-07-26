@@ -1,0 +1,25 @@
+<snippet>
+	<content><![CDATA[
+/**
+*   author:     roccoshi
+*   created:    ${1:alt+t}
+*/
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long
+const int mod = 1e9 + 7;
+const int inf = 0x3f3f3f3f; 
+const int ninf = 0xc0c0c0c0;
+const int maxn = 10000 + 5;
+
+
+int main() {
+    ${2:code}    
+    return 0;
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>init</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.c++</scope>
+</snippet>

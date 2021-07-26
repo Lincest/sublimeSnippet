@@ -1,0 +1,98 @@
+<snippet>
+    <content><![CDATA[
+/* 
+        高精度加减乘除:
+        @param: 倒序的两个高精度数组
+        @return: 字符串表示的结果
+*/
+
+/* --------- 高精度加法 ----------- */
+string bigadd(vector<int>& a, vector<int>& b) {
+    if (a.size() < b.size()) return bigadd(b, a);
+    int t = 0;
+    string ans = "";
+    for (int i = 0; i < a.size(); ++i) {
+        t += a[i];
+        if (i < b.size()) t += b[i];
+        ans += to_string(t % 10);
+        t /= 10;
+    }
+    if (t) ans += to_string(t);
+    reverse(ans.begin(), ans.end());
+    return ans;
+}
+
+/* --------- 高精度减法 ----------- */
+// a < b return -1;
+int comp(vector<int>& a, vector<int>& b) {
+    if (a.size() < b.size()) return -1;
+    else if (a.size() > b.size()) return 1;
+    else {
+        int i = a.size() - 1;
+        while (i && a[i] == b[i]) --i;
+        if (a[i] < b[i]) return -1;
+        return 1;
+    }
+}
+
+
+string bigsub (vector<int>& a, vector<int>& b) {
+    if (comp(a, b) < 0) return "-" + bigsub(b, a);
+    string ans = "";
+    for (int i = 0, t = 0; i < a.size(); ++i) {
+        t = a[i] - t;
+        if (i < b.size()) t -= b[i];
+        ans += to_string((t + 10) % 10);
+        if (t < 0) t = 1;
+        else t = 0;
+    }
+    while (ans.size() > 1 && ans.back() == '0') ans.pop_back();
+    reverse(ans.begin(), ans.end());
+    return ans;
+}
+
+/* --------- 高精度乘法 ----------- */
+string bigmul (vector<int>& a, vector<int>& b) {
+    vector<int> c(a.size() + b.size(), 0);
+    for (int i = 0; i < a.size(); ++i) {
+        for (int j = 0; j < b.size(); ++j) {
+            c[i + j] += a[i] * b[j];
+        }
+    }
+    for (int i = 0, t = 0; i < c.size(); ++i) {
+        t += c[i];
+        c[i] = t % 10;
+        t /= 10;
+    }
+    while (c.size() > 1 && c.back() == 0) c.pop_back();
+    string ans;
+    for (int i = c.size() - 1; i >= 0; --i) ans += c[i] + '0';
+    return ans;
+}
+
+/* --------- 高精度除法 ----------- */
+/* 
+    @params: a为正序被除数, b为除数, r是余数
+*/
+string bigdiv(vector<int>& a, int b, int& r) {
+    vector<int> c;
+    r = 0;
+    for (int i = 0; i < a.size(); ++i) {
+        r = r * 10 + a[i];
+        c.push_back(r / b);
+        r %= b;
+    }
+    int ptr = 0;
+    while (ptr < c.size() - 1 && c[ptr] == 0) ++ptr;
+    string ans; 
+    for (int i = ptr; i < c.size(); ++i) ans += c[i] + '0';
+    return ans;
+}
+
+
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>bigcal</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.c++</scope>
+</snippet>

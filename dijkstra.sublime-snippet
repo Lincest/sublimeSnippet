@@ -1,0 +1,49 @@
+<snippet>
+    <content><![CDATA[
+/*   
+description: 
+    dijkstra + priority_queue
+*/
+const int N = 200010;
+const int inf = 0x3f3f3f3f;
+
+int h[N], ne[N], e[N], w[N], idx;
+int dist[N];
+
+void add (int a, int b, int c) {
+    e[idx] = b, ne[idx] = h[a], w[idx] = c, h[a] = idx++;
+}
+
+void dijkstra () {
+    memset(h, -1, sizeof h);
+    memset(dist, inf, sizeof dist);
+    int n, m;
+    cin >> n >> m;
+    while (m--) {
+        int a, b, c;
+        cin >> a >> b >> c;
+        add(a, b, c);
+    }
+    priority_queue<pair<int, int>> pq;
+    dist[1] = 0;
+    pq.emplace(0, 1);
+    while (!pq.empty()) {
+        auto [d, cur] = pq.top(); pq.pop();
+        d = -d;
+        if (dist[cur] < d) continue;
+        for (int i = h[cur]; ~i; i = ne[i]) {
+            int j = e[i];
+            if (dist[cur] + w[i] < dist[j]) {
+                dist[j] = dist[cur] + w[i];
+                pq.emplace(-dist[j], j);
+            }
+        }
+    }
+    cout << (dist[n] == inf ? -1 : dist[n]) << endl;
+}
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>dijkstra</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.c++</scope>
+</snippet>
